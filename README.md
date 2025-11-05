@@ -25,7 +25,7 @@ project-root/
 │   ├── templates/
 │   │   └── index.html
 │   └── Dockerfile
-├── test-task/            # Custom MailHog Dockerfile
+├── mailhog/            # Custom MailHog Dockerfile
 │   └── Dockerfile
 ├── auth/                 # MailHog auth file (not committed)
 │   └── pass
