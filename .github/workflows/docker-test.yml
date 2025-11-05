@@ -38,7 +38,7 @@ jobs:
           docker-compose -f docker-compose.yml up -d
           sleep 15
 
-      - name: Run test: Check Flask can connect to MySQL and MailHog
+      - name: Run test- Check Flask can connect to MySQL and MailHog
         run: |
           docker exec flask-mailhog-web python3 - <<'PYTHON_CODE'
 import os
