@@ -21,7 +21,7 @@ services:
 
   mailhog:
     build:
-      context: /Users/layannasereddin/test-task
+      context: ./mailhog
       dockerfile: Dockerfile
     container_name: mailhog
     command: ["MailHog", "-auth-file=/auth/pass"]
