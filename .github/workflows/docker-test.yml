@@ -26,6 +26,5 @@ jobs:
           password: ${{ secrets.DOCKER_PASSWORD }}
       - name: Push images to Docker Hub
         run: |
-          docker tag flask-mailhog-web ${{ secrets.DOCKER_USERNAME }}/flask-mailhog-web:latest
           docker push ${{ secrets.DOCKER_USERNAME }}/flask-mailhog-web:latest
 
