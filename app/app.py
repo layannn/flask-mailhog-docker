@@ -4,10 +4,10 @@ import mysql.connector
 import os
 
 app = Flask(__name__)
-app.secret_key = "supersecretkey"
+app.secret_key = os.urandom(16)
 
 # Mail config
-app.config['MAIL_SERVER'] = os.getenv("MAIL_SERVER", "mailhog-lol")
+app.config['MAIL_SERVER'] = os.getenv("MAIL_SERVER", "mailhog")
 app.config['MAIL_PORT'] = int(os.getenv("MAIL_PORT", 1025))
 app.config['MAIL_USE_TLS'] = False
 app.config['MAIL_USE_SSL'] = False
