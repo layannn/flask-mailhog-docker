@@ -1,0 +1,36 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: app-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: app.py
+  template:
+    metadata:
+      labels:
+        app: app.py
+    spec:
+      containers:
+      - name: flask-mailhog-web
+        image: flask-mailhog-docker-web:latest
+        ports:
+        - containerPort: 5001
+        imagePullPolicy: Never
+        env:
+        - name: DB_HOST
+          value: database-service
+        - name: MAIL_SERVER
+          value: mail-service
+        - name: MAIL_PORT
+          value: "1025"
+        - name: DB_PORT
+          value: "3306"
+        - name: DB_USER
+          value: "flaskuser"
+        - name: DB_PASSWORD
+          value: "flaskpass"
+        - name: DB_NAME
+          value: "emailsdb"
+
