@@ -85,7 +85,7 @@ This will:
 
 ## How it Works
 
-* Flask sends emails to `mailhog-lol:1025` inside the Docker network.
+* Flask sends emails to `mailhog:1025` inside the Docker network.
 * MailHog stores the emails internally (web UI requires auth: `admin` / `mypassword`).
 * Flask stores each sent email in MySQL (`emailsdb`) using the low-privilege user.
 * Containers communicate internally using the `my-bridge-network` bridge network.
