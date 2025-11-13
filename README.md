@@ -151,7 +151,7 @@ This project can also be deployed locally on Kubernetes using Minikube. All requ
 | ------------- | ------------------------------------------------- | ------------------------------------------------------------------------- |
 | **Flask App** | `app-deployment.yaml`, `app-service.yaml`     | Deploys the Flask web application and exposes it via a ClusterIP service. |
 | **MailHog**   | `mail-deployment.yaml`, `mail-service.yaml` | Deploys MailHog for email capture, optionally with Basic Auth.            |
-| **MySQL**     | `sql-deployment.yaml`, `sql-service.yaml`     | Deploys MySQL with persistent storage and a low-privilege user.           |
+| **MySQL**     | `sql-deployment.yaml`, `sql-service.yaml`     | Deploys MySQL with a low-privilege user.           |
 
 All components communicate through Kubernetes internal networking — no external ports are exposed by default.
 
