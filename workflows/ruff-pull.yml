@@ -14,7 +14,7 @@ jobs:
           python-version: '3.13'
       - name: Install Ruff
         run: pip install ruff
-      - name: Run Ruff
-        run: ruff check .
       - name: Run Ruff with Fix
         run: ruff check . --fix
+      - name: Ruff Format
+        run: ruff format 
